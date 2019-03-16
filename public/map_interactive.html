@@ -19,33 +19,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+         <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <!-- icons -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
         type='text/css'>
     <!-- icon made by Freepik from https://www.flaticon.com-->
     <link rel="icon" href="images/clapperboard.png">
-    <link href="/styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
 
-        #accordion {
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 50%;
-        }
-
-        #map {
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 50%;
-        }
 
         img {
             max-height: 300px;
@@ -69,6 +53,10 @@
             font-weight: bold;
         }
 
+        .factButton  {
+            font-size: 1.2em;
+        }
+
         footer {
             position: absolute;
             bottom: 0;
@@ -78,9 +66,7 @@
             color: #999999;
             padding: 10px;
         }
-        .footer-link {
-            color: #999999;
-        }
+
 
         /* commented out navbar because I couldnt get it to function properly */
         .navbar-brand {
@@ -92,16 +78,59 @@
 </head>
 
 <body>
-   <div class="mb-5em">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Philmadelphia</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/logout"></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose Movie
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Rocky</a>
+                        <a class="dropdown-item" href="#">The Sixth Sense</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Suprise Me!</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Browse by Neighborhood
+                            </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Center City</a>
+                            <a class="dropdown-item" href="#">Fairmount</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Suprise Me!</a>
+                          </div>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+
+   <div>
     <div id='accordion'></div>
     <div id='map'></div>
     <footer class="footer">
         <div class="container text-center">
-          <p><a class="footer-link" href="/creators">learn more about the Creators</a> | <a class="footer-link" href="/resources">Link to resources</a></p>
+          <p><a class="footer-link" href="/creators">learn more about the Creators</a> | <a class="footer-link" href="/resources">Link to resources</a>| <a class="footer-link" href="/members">Go Back to Survey</a> </p>
         </div>
-    </div>
+    
       </footer>
-   
+    </div>
     <script>
        
 
@@ -266,7 +295,7 @@
                     "descriptionURL": "https://en.wikipedia.org/wiki/Wells_Fargo_Building_(Philadelphia)",
                     "description": "The center of business for the Dukes in the film, this actual bank was built in 1928 and is listed on the National Register of Historic Places",
                     "image": "http://4.bp.blogspot.com/-F853Ijg3TYw/Uejh3WflB9I/AAAAAAAAII0/1Pj38X1ILD0/s1600/DukeAndDuke2_135+S+Broad_TradingPlaces.jpg",
-                    "colors": ["#eee2cb","black"],
+                    "colors": ["#f5e8ce","black"],
                     "mapStyle":"mapbox://styles/mapbox/basic-v9"
                 },
                 "geometry": {
@@ -326,14 +355,19 @@
                 var movieMap = filteredArray[0].properties.mapStyle;
                 var movieColor = filteredArray[0].properties.colors[0];
                 var fontColor = filteredArray[0].properties.colors[1];
-                var movieLocation = "<div class=\"card-header\" id=\"heading" + j + "\"> <h5 class=\"mb-0\"> <button class=\"btn btn-link\" data-toggle=\"collapse\" data-target=\"#collapse" + j + "\" aria-expanded=\"true\" aria-controls=\"collapse" + j + "\">" + filteredArray[j].properties.title + "</button></h5></div>";
-                var movieTitle = "<h3>" + filteredArray[0].properties.movie + "</h3>";
+                var movieLocation = "<div class=\"card-header\" id=\"heading" + j + "\"> <h3 class=\"mb-0\"> <button class=\"btn btn-link factButton\" data-toggle=\"collapse\" data-target=\"#collapse" + j + "\" aria-expanded=\"true\" aria-controls=\"collapse" + j + "\">" + filteredArray[j].properties.title + "</button></h3></div>";
+                var movieTitle = "<h1>" + filteredArray[0].properties.movie + "</h1>";
                 var moviePoster = "<img style=\"max-height:725px;max-width:500px;\"src=\"" + filteredArray[0].properties.poster + "\"></img>";
-                var movieDescription = "<div id=\"collapse" + j + "\" class=\"collapse hide\" aria-labelledby=\"heading" + j + "\" data-parent=\"#accordion\"> <div class=\"card-body\">" + filteredArray[j].properties.description + "</div></div>";
+                var movieDescription = "<div id=\"collapse" + j + "\" class=\"collapse show\" aria-labelledby=\"heading" + j + "\" data-parent=\"#accordion\"> <div class=\"card-body\">" + filteredArray[j].properties.description + "</div></div>";
                 $("#accordion").append("<div class=\"card\">" + movieLocation + movieDescription + "</div>");
                 $("#accordion, .card-header, .card-body").css("background-color",movieColor);
                 $(".card").css("border", "none");
                 $("#accordion, .btn-link, .card-body").css("color",fontColor);
+                if (movieChosen === "all")  {
+                    moviePoster= "<img style=\"max-height:725px;max-width:500px;\"src=\"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F38670619%2F108919755319%2F1%2Foriginal.jpg?auto=compress&s=2e48dc8c8ff89d4b8a0a267ed8972494\"\"></img>";
+                    movieTitle="<h1>Explore The Map!</h1>";
+                    movieMap="mapbox://styles/mapbox/bright-v9"
+                }
             }
             $("#accordion").prepend("<div class=\"text-center\">" + moviePoster+ "</div>"+"<div class=\"text-center\">" + movieTitle+ "</div>");
 
@@ -345,7 +379,7 @@
             // style: 'mapbox://styles/mapbox/streets-v9', // style if you want it to look like google maps-ish
             style: movieMap, //grayscale style
             center: [-75.16, 39.97], // starting position [lng, lat]
-            zoom: 12 // starting zoom
+            zoom: 13 // starting zoom
         });
 
 

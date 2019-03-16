@@ -38,6 +38,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/creators.html"));
   });
 
+  app.get("/resources", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/resources.html"));
+  });
+
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/404.html"));
