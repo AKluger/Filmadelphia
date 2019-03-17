@@ -10,7 +10,7 @@ A user can sign up to create a user profile.  This will unlock the ability to vi
 ---
 
 
-![Alt Filmadelphia screenshot](localhost_3000_map_interactive.html(iPad Pro).png) 
+![Alt Filmadelphia screenshot](filmadelphia.png) 
       
 
 **Technologies used**
