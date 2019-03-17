@@ -5,22 +5,37 @@
   <title>Creators</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet"> 
       <!-- icon made by Freepik from https://www.flaticon.com-->
       <link rel="icon" href="images/clapperboard.png">
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/logout">
-          Logout
-        </a>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Philmadelphia</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/map">Browse Map</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -35,17 +50,20 @@
           <br>
         </div>
 
-        <footer class="footer">
-          <div class="container text-center">
-            <p ><a class="footer-link"href="/members">Go back to App</a></p>
-          </div>
-        </footer>
 
       </div>
     </div>
   </div>
   </div>
 
+  <footer class="footer">
+      <div class="container text-center">
+          <p><a class="footer-link" href="/creators">learn more about the Creators</a> | <a class="footer-link"
+                  href="/resources">Link to resources</a>| <a class="footer-link" href="/members">Go Back to
+                  Survey</a> </p>
+      </div>
+
+  </footer>
 </body>
 
 </html>
