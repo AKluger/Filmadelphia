@@ -9,6 +9,10 @@ A user can sign up to create a user profile.  This will unlock the ability to vi
 
 ---
 
+
+   ![Alt Filmadelphia screenshot](Filmadelphia/localhost_3000_map_interactive.html(iPad Pro).png?raw=true "Title") 
+      
+
 **Technologies used**
 ```
 - MySQL database
