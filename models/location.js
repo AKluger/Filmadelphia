@@ -1,7 +1,7 @@
 // for eventual move to mysql DB
 
-module.exports = function(sequelize, DataTypes) {
-  var Location = sequelize.define("Location", {
+module.exports = function (sequelize, DataTypes) {
+  var Location = sequelize.define('Location', {
     placeName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -22,17 +22,17 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: null,
       validate: { min: -180, max: 180 }
     }
-  });
+  })
 
-  Location.associate = function(models) {
+  Location.associate = function (models) {
     // We're saying that a Location should belong to an Movie
     // A Location can't be created without a Movie due to the foreign key constraint
     Location.belongsTo(models.Movie, {
       foreignKey: {
         allowNull: false
       }
-    });
-  };
+    })
+  }
 
-  return Location;
-};
+  return Location
+}

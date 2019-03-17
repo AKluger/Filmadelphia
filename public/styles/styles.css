@@ -9,23 +9,26 @@ body {
 a  {color:black;}
 
 .passport  {
-  background-image: url("../images/rockyStatue.jpg");
+  background-image: url("../images/welcome_plain.jpg");
 }
 
 #accordion {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 56px;
   bottom: 0;
-  width: 50%;
+  width: 40%;
 }
 
 #map {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 56px;
   bottom: 0;
-  width: 50%;
+  width: 60%;
+}
+h4 {
+  color: black;
 }
   .navbar {
     z-index: 1000;
@@ -55,8 +58,7 @@ font-size: 20px;
 
 .font_survey_title{
   font-family: 'Ubuntu Condensed', sans-serif;
-  color: #e4751b;
-  font-size: 1.8rem;
+  color: black;
 }
 
 .font_subtitle{
@@ -173,19 +175,6 @@ float: right;
     margin: 1.75rem auto;
 }}
 
-.logo_title{
-  margin: -1rem auto -1rem -1rem;
-}
-
-.logo_title2{
-  margin: 1rem auto -1rem -1rem;
-}
-.logo_title img{
-  width: 35%;
-  height: auto;
-  vertical-align: middle;
-}
-
 .q_top_marg{
   margin-top: 7%;
 }
@@ -205,6 +194,16 @@ float: right;
 
 .footer-link {
   color: #999999;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #223438;
+  color: #999999;
+  padding: 10px;
 }
 
 .creator-link:hover  {

@@ -1,7 +1,7 @@
 // for eventual move to mysql DB
 
-module.exports = function(sequelize, DataTypes) {
-  var Movie = sequelize.define("Movie", {
+module.exports = function (sequelize, DataTypes) {
+  var Movie = sequelize.define('Movie', {
     // Giving the Movie model a name of type STRING
     title: DataTypes.STRING,
     location: DataTypes.STRING,
@@ -18,15 +18,15 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: null,
       validate: { min: -180, max: 180 }
     }
-  });
+  })
 
-  Movie.associate = function(models) {
+  Movie.associate = function (models) {
     // Associating Movie with locations
     // When an Movie is deleted, also delete any associated locations
     Movie.hasMany(models.Location, {
-      onDelete: "cascade"
-    });
-  };
+      onDelete: 'cascade'
+    })
+  }
 
-  return Movie;
-};
+  return Movie
+}
