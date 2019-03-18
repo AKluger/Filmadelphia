@@ -233,6 +233,17 @@ footer {
   color: black;
 }
 
+.list-group-item[aria-selected="true"] {
+  background-color: black;
+  color:white;
+  border: none;
+}
+.list-group-item:active {
+  background-color: black;
+  color:white;
+  border: none;
+}
+
 #marble {
   width: 600px;
   height: 600px;

@@ -88,9 +88,13 @@
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Choose Movie
                       </a>
+                      <!-- in the future render movie and neighborhood options dynamically -->
+                      <!-- and each to have onclick events -->
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Rocky</a>
                         <a class="dropdown-item" href="#">The Sixth Sense</a>
+                        <a class="dropdown-item" href="#">Trading Places</a>
+                        <a class="dropdown-item" href="#">National Treasure</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Suprise Me!</a>
                       </div>
@@ -102,6 +106,8 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Center City</a>
                             <a class="dropdown-item" href="#">Fairmount</a>
+                            <a class="dropdown-item" href="#">Kensington</a>
+                            <a class="dropdown-item" href="#">Society Hill</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Suprise Me!</a>
                           </div>
@@ -118,7 +124,7 @@
     <div id='map'></div>
     <footer class="footer">
         <div class="container text-center">
-          <p><a class="footer-link" href="/creators">learn more about the Creators</a> | <a class="footer-link" href="/resources">Link to resources</a>| <a class="footer-link" href="/members">Go Back to Survey</a> </p>
+          <p><a class="footer-link" href="/creators">learn more about the Creators</a> | <a class="footer-link" href="/resources">Link to resources</a> | <a class="footer-link" href="/members">Go Back to Survey</a> </p>
         </div>
     
       </footer>
@@ -130,7 +136,7 @@
        
             var movieChosen = data.movie;
 
-            // There are three movies with three locations each as a GeoJSON
+        //   GEOJSON
             var featureArray = [{
                 "type": "Feature",
                 "properties": {
