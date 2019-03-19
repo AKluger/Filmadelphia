@@ -7,61 +7,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet"> 
-      <!-- icon made by Freepik from https://www.flaticon.com-->
-      <link rel="icon" href="images/clapperboard.png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+  <!-- icon made by Freepik from https://www.flaticon.com-->
+  <link rel="icon" href="images/clapperboard.png">
   <link href="styles/styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Philmadelphia</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/logout"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/map">Browse Map</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Philmadelphia</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/map">Browse Map</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div class="container creators">
     <div class="row">
       <div class="col-md-6 offset-3">
-
-        <div class="jumbotron text-center" id="marble">
-          <h1 id="creators"><i class="text-center " aria-hidden="true"></i>Creator profiles</h1>
-          <br>
-          <h2><a class="creator-link" href="https://www.linkedin.com/in/akluger/">Alex Kluger</a></h2>
-          <h2><a class="creator-link" href="https://www.linkedin.com/in/kevin-bray-53a194171/">Kevin Bray</a></h2>
-          <h2><a class="creator-link" href="https://www.linkedin.com/in/suzanne-hunter-654708107/">Suzanne Hunter</h2>
-          <h2><a class="creator-link" href="https://www.linkedin.com/in/ize-imai-45757b29/">Ize Imai</a></h2>
-          <br>
+        <div><h5 class="text-center mb-3">This Project was created by a team of four students in the UPenn full-stack coding bootcamp.  We started with a simple idea and quickly built a fully operational web app in a matter of weeks.  The original can be found <a href="https://filmadelphia.herokuapp.com/">HERE</a></a> The version you are currently using is maintained by Alex Kluger.</h5></div>
+        <div class="card" style="width:400px">
+          <!-- <img class="card-img-top" src="img_avatar1.png" alt="Card image"> -->
+          <div class="card-body">
+            <h4 class="card-title">Alex Kluger</h4>
+            <a href="https://www.linkedin.com/in/akluger/" class="btn btn-primary">See Profile</a>
+          </div>
         </div>
+        <div class="card" style="width:400px">
+          <!-- <img class="card-img-top" src="img_avatar1.png" alt="Card image"> -->
+          <div class="card-body">
+            <h4 class="card-title">Kevin Bray</h4>
 
+            <a href="https://www.linkedin.com/in/kevin-bray-53a194171/" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+        <div class="card" style="width:400px">
+          <!-- <img class="card-img-top" src="img_avatar1.png" alt="Card image"> -->
+          <div class="card-body">
+            <h4 class="card-title">Suzanne Hunter</h4>
+
+            <a href="https://www.linkedin.com/in/suzanne-hunter-654708107/" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+        <div class="card" style="width:400px">
+          <!-- <img class="card-img-top" src="img_avatar1.png" alt="Card image"> -->
+          <div class="card-body">
+            <h4 class="card-title">Ize Imai</h4>
+            <a href="https://www.linkedin.com/in/ize-imai-45757b29/" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
 
       </div>
     </div>
-  </div>
-  </div>
-
+</div>
   <footer class="footer">
-      <div class="container text-center">
-          <p><a class="footer-link" href="/creators">learn more about the Creators</a> | <a class="footer-link"
-                  href="/resources">Link to resources</a> | <a class="footer-link" href="/members">Go Back to
-                  Survey</a> </p>
-      </div>
+    <div class="container text-center">
+      <p><a class="footer-link" href="/creators">learn more about the Creators</a> | <a class="footer-link"
+          href="/resources">Link to resources</a> | <a class="footer-link" href="/map">Go to Map</a> </p>
+    </div>
 
   </footer>
 </body>

@@ -1,0 +1,52 @@
+
+.box {
+  /* background-color: black; */
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  /* position: relative; */
+  /* box-shadow: inset 0 0 3px #000; */
+  /* border-radius: 5px; */
+  /* border: 1px solid #111; */
+  overflow: hidden;
+}
+.box b {
+  background-position: center;
+  display: block;
+   width: 20%;
+  height: 15%;
+  /* border-radius: 50%;  */
+  background-image: url("../images/SkylinePhiladelphia.jpg");
+  
+  /* box-shadow: inset -5px -5px 5px rgba(0,0,0,.6), 15px 15px 2px rgba(0,0,0,.04); */
+  position: absolute;
+  -webkit-animation: moveX 7.0s linear 0s infinite alternate, moveY 10.0s linear 0s infinite alternate;
+  -moz-animation: moveX 7.0s linear 0s infinite alternate, moveY 10.0s linear 0s infinite alternate;
+  -o-animation: moveX 7.0s linear 0s infinite alternate, moveY 10.0s linear 0s infinite alternate;
+  animation: moveX 7.0s linear 0s infinite alternate, moveY 10.0s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes moveX {
+  from { left: 0; } to { left: 100vmin; }
+}
+@-moz-keyframes moveX {
+  from { left: 0; } to { left: 100vmin; }
+}
+@-o-keyframes moveX {
+  from { left: 0; } to { left: 100vmin; }
+}
+@keyframes moveX {
+  from { left: 0; } to { left: 100vmin; }
+}
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: 100vmin; }
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { top: 100vmin; }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { top: 100vmin; }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: 85vmin; }
+}
