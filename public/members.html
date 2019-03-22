@@ -19,8 +19,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
-      <!-- icon made by Freepik from https://www.flaticon.com-->
-      <link rel="icon" href="images/clapperboard.png">
+  <!-- icon made by Freepik from https://www.flaticon.com-->
+  <link rel="icon" href="images/clapperboard.png">
   <!-- Local CSS -->
   <link href="styles/styles.css" rel="stylesheet">
 </head>
@@ -33,12 +33,12 @@
       </div>
     </div>
   </nav>
-  <div class="containerf">
+  <div class="container creators">
     <div class="hero">
-      <div class="hero_img">
+      <!-- <div class="hero_img">
         <img src="images/welcome_plain.jpg">
-      </div>
-      <div class="hero_text">
+      </div> -->
+      <div class="hero_text col-md-6">
         <p class="font_subtitle">
           WELCOME
         </p>
@@ -50,12 +50,13 @@
         </p>
 
         <p class="font_byline">
-          Browse our map of movie locations or take a survey to discover your new favorite Philly flick with a custom map to match!
+          Browse our map of movie locations or take a survey to discover your new favorite Philly flick with a custom
+          map to match!
         </p>
       </div>
       <!--close hero text-->
       <!-- CIRCLE BUTTONS ON BOTTOM LEFT -->
-      <div class="button_loc_desk">
+      <div class="button_loc_desk col-md-6">
         <div class="round-button left_btn">
           <button class="button roundButton" data-toggle="modal" data-target="#surveyModel">
             <div class="round-button-circle">
@@ -73,14 +74,20 @@
               </a>
             </div>
           </button>
-        </div> <!--close right_btn-->
-      </div> <!--close button_loc_desk-->
-    </div> <!--close hero-->
-  </div> <!--close containerf-->
-
+        </div>
+        <!--close right_btn-->
+      </div>
+      <!--close button_loc_desk-->
+    </div>
+    <!--close hero-->
+    <div class="foot"></div>
+  </div>
+  <!--close containerf-->
+ 
   <footer class="footer">
     <div class="container text-center">
-      <p><a class="footer-link" href="/creators">learn more about the Creators</a> | <a class="footer-link" href="/resources">Link to Resources</a></p>
+      <p><a class="footer-link" href="/creators">learn more about the Creators</a> | <a class="footer-link"
+          href="/resources">Link to Resources</a></p>
     </div>
   </footer>
 
@@ -90,12 +97,12 @@
     <div class="modal-dialogf">
       <div class="modal-content">
         <div class="modal-header">
-          <div class="logo_title2 text-center">  
+          <div class="logo_title2 text-center">
             <h3 class="font_survey_title">
-                Complete The Survey and see your movie match!
+              Complete The Survey and see your movie match!
             </h3>
-          </div>         <!-- logo title2-->
-        </div>   <!-- modal header -->
+          </div> <!-- logo title2-->
+        </div> <!-- modal header -->
         <div class="modal-body text-center">
           <form role="form" class="absolute" id="surveyForm">
             <h2 class="font_survey_body q_top_marg">
@@ -107,7 +114,7 @@
             </h4>
             <select data-placeholder="" class="chosen-select" id="q1" required>
               <option value="">
-                  Choose...
+                Choose...
               </option>
               <option value="1">1 (No Im lazy!)</option>
               <option value="2">2</option>
@@ -192,7 +199,7 @@
               I would much rather go outdoors than going clubbing!
             </h4>
             <select data-placeholder="" class="chosen-select" id="q8" required>
-               <option value="">Choose...</option>
+              <option value="">Choose...</option>
               <option value="1">1 (Nope)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -216,7 +223,7 @@
               Ghosts do not scare me!
             </h4>
             <select data-placeholder="" class="chosen-select q_btm_marg" id="q10" required>
-                <option value="">Choose...</option>
+              <option value="">Choose...</option>
               <!-- <option value=""></option> -->
               <option value="1">1 (I don't like them!)</option>
               <option value="2">2</option>
@@ -230,17 +237,20 @@
 
             <!-- CIRCLE BUTTONS ON BOTTOM LEFT -->
             <div class="button_loc_modal b_top_marg">
-                <div class="round-button">
-                  <button type="submit" class="button roundButton" id="submit">
-                    <div class="round-button-circle">
-                      <a href="#" class="round-button">
-                        Submit Survey
-                      </a>
-                    </div>  <!--close round button circle-->
-                  </button>
-                </div>  <!--close round-button-->
-              </div> <!--close button_loc_modal-->
-              
+              <div class="round-button">
+                <button type="submit" class="button roundButton" id="submit">
+                  <div class="round-button-circle">
+                    <a href="#" class="round-button">
+                      Submit Survey
+                    </a>
+                  </div>
+                  <!--close round button circle-->
+                </button>
+              </div>
+              <!--close round-button-->
+            </div>
+            <!--close button_loc_modal-->
+
           </form>
         </div> <!-- modal body-->
       </div> <!-- modal content-->

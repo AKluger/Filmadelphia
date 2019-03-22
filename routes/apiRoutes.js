@@ -76,7 +76,7 @@ module.exports = function (app) {
   // Send user survey results for movie matching
   app.post('/api/movies', function (req, res) {
     if (req.user) {
-      var closeMatch = {
+      let closeMatch = {
         title: '',
         location: '',
         address: '',
