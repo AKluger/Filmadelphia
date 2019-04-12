@@ -60,7 +60,6 @@ module.exports = function (app) {
       where: { name: req.user.name }
     })
       .then(function (data) {
-        console.log(data.movie)
         res.json(data)
       })
       .catch(function (err) {
